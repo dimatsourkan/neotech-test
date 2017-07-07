@@ -233,6 +233,7 @@ class App {
     }
 
     cleareScore() {
+        this.score = 0;
         this.score1.innerHTML = 0;
         this.score2.innerHTML = 0;
     }
