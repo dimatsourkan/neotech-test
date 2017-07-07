@@ -62,10 +62,12 @@ class App {
         this.hideSplash();
         this.hideSplash2();
         this.cleareScore();
+
         this.Snake = new Snake();
-        this.setFood();
         this.snakeEvents();
         this.Snake.startMove();
+
+        this.setFood();
     }
 
     /**
