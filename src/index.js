@@ -29,10 +29,26 @@ class App {
     _events() {
         document.addEventListener('keydown', e => {
             switch(e.keyCode || e.which) {
-                case KEYS.ENTER : this.initGame(); break;
+                case KEYS.ENTER : this.startGame(); break;
                 case KEYS.ESC   : this.stopGame(); break;
             }
         })
+    }
+
+    /**
+     * Стартует игру
+     */
+    startGame() {
+        this.stopGame();
+        this.hideSplash();
+        this.hideSplash2();
+        this.cleareScore();
+
+        this.Snake = new Snake();
+        this.snakeEvents();
+        this.Snake.startMove();
+
+        this.setFood();
     }
 
     /**
@@ -52,22 +68,6 @@ class App {
             this.Food  = null;
         }
 
-    }
-
-    /**
-     * Стартует игру
-     */
-    initGame() {
-        this.stopGame();
-        this.hideSplash();
-        this.hideSplash2();
-        this.cleareScore();
-
-        this.Snake = new Snake();
-        this.snakeEvents();
-        this.Snake.startMove();
-
-        this.setFood();
     }
 
     /**
