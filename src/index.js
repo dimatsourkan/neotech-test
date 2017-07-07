@@ -55,7 +55,6 @@ class App {
      * Останавливает игру
      */
     stopGame() {
-
         this.showSplash2();
         if(this.Snake) {
             this.Snake.stopMove();
@@ -122,7 +121,9 @@ class App {
             this.setFood();
         }
 
-        this.Snake.renderSnake();
+        if(this.Snake) {
+            this.Snake.renderSnake();
+        }
     }
 
     /**

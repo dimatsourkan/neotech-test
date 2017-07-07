@@ -1,7 +1,7 @@
 /**
  * Created by Дмитрий on 07.07.2017.
  */
-export const MOVE_INTERVAL = 100;
+export const MOVE_INTERVAL = 600;
 export const POINT_SIZE    = 10;
 
 export const TABLE_PARAMS = {

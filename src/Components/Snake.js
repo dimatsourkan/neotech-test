@@ -8,7 +8,7 @@ export class Snake {
 
     constructor() {
         this._enableDirectionEdit = true;
-        this.timeinterval = null;
+        this.timeout      = null;
         this.snake        = [];
         this._moveTo      = SNAKE_MOVE.BOTTOM;
         this.snakeHead    = null;
@@ -54,18 +54,17 @@ export class Snake {
      * Начать движение змеи
      */
     startMove() {
-        this.timeinterval = setInterval(() => {
+        this.timeout = setTimeout(() => {
+            this.startMove();
             this.moveSnake();
-        }, MOVE_INTERVAL);
+        }, MOVE_INTERVAL/this.snake.length);
     }
 
     /**
      * Остановить движение змеи
      */
     stopMove() {
-        if(this.timeinterval) {
-            clearInterval(this.timeinterval);
-        }
+        clearTimeout(this.timeout);
     }
 
     /**
