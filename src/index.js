@@ -105,7 +105,7 @@ class App {
     checkCollisions(snakeHead, snake) {
 
         /**
-         * Проверка на столкновения змеи с рамками холста и на замкнутый круг
+         * Проверка на столкновения змеи с рамками холста и с собственным хвостом
          */
         if(this.checkSnakeCollision(snakeHead, snake) || this.checkSnakeTableCollision(snakeHead)) {
             return this.stopGame();
