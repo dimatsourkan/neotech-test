@@ -156,6 +156,7 @@ class App {
             if(point.$element !== sPoint.$element) {
                 if(sPoint.x === point.x && sPoint.y === point.y) {
                     collision = true;
+                    break;
                 }
             }
         }
