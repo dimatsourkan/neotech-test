@@ -1,9 +1,19 @@
 /**
  * Created by Дмитрий on 07.07.2017.
  */
+/**
+ * Интервал с которым движется змея
+ */
 export const MOVE_INTERVAL = 600;
-export const POINT_SIZE    = 10;
 
+/**
+ * Размер точек
+ */
+export const POINT_SIZE = 10;
+
+/**
+ * Размеры поля в точках
+ */
 export const TABLE_PARAMS = {
     WIDTH : 30,
     HEIGHT : 30
