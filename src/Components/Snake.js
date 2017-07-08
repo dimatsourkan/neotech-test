@@ -8,12 +8,14 @@ export class Snake {
 
     constructor() {
         this._enableDirectionEdit = true;
+        this._moveTo      = SNAKE_MOVE.BOTTOM;
+        this._onMoveSnake = null;
+        
         this.timeout      = null;
         this.snake        = [];
-        this._moveTo      = SNAKE_MOVE.BOTTOM;
         this.snakeHead    = null;
         this.$snake       = document.querySelector('#snake');
-        this._onMoveSnake = null;
+        
         this._initSnake();
     }
 
@@ -24,8 +26,8 @@ export class Snake {
     set moveTo(moveTo) {
         if(this._enableDirectionEdit) {
             this._moveTo = moveTo;
+            this._enableDirectionEdit = false;
         }
-        this._enableDirectionEdit = false;
     }
 
     /**
