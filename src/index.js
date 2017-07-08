@@ -153,11 +153,9 @@ class App {
 
         let collision = false;
         for(let sPoint of snake) {
-            if(point.$element !== sPoint.$element) {
-                if(sPoint.x === point.x && sPoint.y === point.y) {
-                    collision = true;
-                    break;
-                }
+            if(point.$element !== sPoint.$element && sPoint.x === point.x && sPoint.y === point.y) {
+                collision = true;
+                break;
             }
         }
         return collision;
