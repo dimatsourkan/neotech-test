@@ -86,15 +86,14 @@ class App {
 
         let foodPos = this.getFoodPosition();
         this.Food   = new Food(foodPos.x, foodPos.y);
-
+        this.foodContainer.appendChild(this.Food.$element);
+        
         /**
          * Если полученая точка на ходится на координатах точки змеи то получаем другую
          */
         if(this.checkSnakeCollision(this.Food, this.Snake.snake)) {
-            this.setFood();
+            return this.setFood();
         }
-
-        this.foodContainer.appendChild(this.Food.$element)
     }
 
     /**
