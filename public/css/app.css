@@ -30,6 +30,7 @@ body {
     position: relative;
 }
 
+.food > div,
 .snake > div {
     box-sizing: border-box;
     border: 1px solid #000;
@@ -39,13 +40,18 @@ body {
 }
 
 .food > div {
-    background: #000;
-    box-sizing: border-box;
-    border: 2px solid #9c9;
-    position: absolute;
+    animation-name: opacity;
+    animation-duration: .7s;
+    animation-iteration-count: infinite;
 }
 
 .score {
     margin-top: 10px;
     text-align: left;
 }
+
+@keyframes opacity {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+} 
